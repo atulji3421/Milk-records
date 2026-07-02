@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulvariya Doodh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Fulvariya Doodh</h2>
+        
+        <!-- प्रोफाइल सेटिंग्स -->
+        <div class="profile-section">
+            <h3>कस्टमर प्रोफाइल सेटिंग्स</h3>
+            <label>कस्टमर का नाम:</label>
+            <input type="text" id="customerName" placeholder="नाम दर्ज करें">
+            
+            <label>फोन नंबर:</label>
+            <input type="tel" id="phone" placeholder="फोन नंबर दर्ज करें">
+            
+            <label>लोकेशन:</label>
+            <input type="text" id="location" placeholder="लोकेशन दर्ज करें">
+            
+            <label>फिक्स मिल्क क्वांटिटी (ml या लीटर में):</label>
+            <input type="number" id="fixedQuantity" placeholder="जैसे: 1 या 500">
+            
+            <button id="saveProfileBtn" onclick="saveProfile()">प्रोफाइल लॉक करें</button>
+            <button id="editProfileBtn" onclick="unlockProfile()" style="display:none; background-color: #f44336;">प्रोफाइल अनलॉक करें</button>
+        </div>
+
+        <hr>
+
+        <!-- रोज की एंट्री जोड़ने का सेक्शन -->
+        <div class="entry-section">
+            <h3>रोज की दूध एंट्री</h3>
+            <label>तारीख और समय:</label>
+            <input type="datetime-local" id="entryDateTime">
+            
+            <button id="addEntryBtn" onclick="addDailyEntry()">एंट्री जोड़ें</button>
+        </div>
+
+        <hr>
+
+        <!-- रिकॉर्ड टेबल -->
+        <h3>दूध रिकॉर्ड्स की लिस्ट</h3>
+        <table id="recordsTable">
+            <thead>
+                <tr>
+                    <th>तारीख और समय</th>
+                    <th>नाम</th>
+                    <th>क्वांटिटी</th>
+                    <th>एक्शन</th>
+                </tr>
+            </thead>
+            <tbody id="recordsBody">
+                <!-- एंट्री यहाँ दिखेंगी -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
