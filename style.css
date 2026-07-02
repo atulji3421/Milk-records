@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #2196F3;
+  --secondary-color: #FFEB3B;
+  --accent-color: #4CAF50;
+  --bg-color: #F5F5F5;
+  --text-color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 854px;
+  aspect-ratio: 16 / 9;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.content {
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary { background-color: var(--accent-color); color: white; }
+.btn-danger { background-color: #F44336; color: white; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th { background-color: var(--secondary-color); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
